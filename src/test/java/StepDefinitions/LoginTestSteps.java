@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import loginCredentials.FirstLogin;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -41,8 +42,7 @@ public class LoginTestSteps {
 
     @When("user enters valid email and password")
     public void user_enters_valid_email_and_password() {
-        driver.findElement(By.cssSelector("input[type='email']")).sendKeys("tyronda62@asurfacesz.com");
-        driver.findElement(By.cssSelector("input[type='password")).sendKeys("testpassword123");
+         FirstLogin firstLogin = new FirstLogin(driver);
     }
 
     @And("click on login button")
