@@ -1,4 +1,4 @@
-package loginCredentials;
+package stepCredentials;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

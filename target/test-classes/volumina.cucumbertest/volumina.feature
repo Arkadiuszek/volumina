@@ -1,8 +1,8 @@
 @PublioLoginScenario
-Feature: feature to test login functionality
+Feature: feature to test page functionality
 
   @PublioLoginTest
-  Scenario: Check login is successful with valid credentials
+  Scenario: add book to cart as logged user
 
     Given user is on login page
     When user logs in

@@ -1,20 +1,17 @@
-package StepDefinitions;
+package stepDefinitions;
 
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import loginCredentials.FirstLogin;
-import org.junit.Assert;
+import stepCredentials.BookSearch;
+import stepCredentials.FirstLogin;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import javax.swing.text.Highlighter;
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 
@@ -47,6 +44,8 @@ public class VoluminaTestSteps {
 
     @And("user search for some books")
     public void user_search_for_some_books() {
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        BookSearch bookSearch = new BookSearch(driver);
 
     }
 
