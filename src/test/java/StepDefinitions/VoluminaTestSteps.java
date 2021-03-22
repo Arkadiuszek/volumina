@@ -8,6 +8,7 @@ import io.cucumber.java.en.Then;
 import loginCredentials.FirstLogin;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +18,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 
-public class LoginTestSteps {
+public class VoluminaTestSteps {
 
     public static final Object URL = "https://www.publio.pl/index.html";
     WebDriver driver = null;
@@ -40,21 +41,23 @@ public class LoginTestSteps {
         zalogujSie.click();
     }
 
-    @When("user enters valid email and password")
-    public void user_enters_valid_email_and_password() {
-         FirstLogin firstLogin = new FirstLogin(driver);
+    @When("user logs in")
+    public void user_logs_in() {FirstLogin firstLogin = new FirstLogin(driver);}
+
+
+    @And("user search for some books")
+    public void user_search_for_some_books() {
+
     }
 
-    @And("click on login button")
-    public void click_on_login_button() {
-        driver.findElement(By.cssSelector("a.btn:nth-child(3) > span:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1)")).click();
-        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+    @And("user adds books in cart")
+    public void user_adds_books_in_cart() {
+
     }
 
-    @Then("user is logged in and home page appears")
-    public void user_is_logged_in_and_home_page_appears() {
-        String userName = driver.findElement(By.className("link-box")).getText();
-        Assert.assertEquals(URL, "https://www.publio.pl/index.html");
+    @Then("user goes to cart")
+    public void user_goes_to_cart() {
+
     }
 
 }

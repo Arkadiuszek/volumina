@@ -5,6 +5,7 @@ Feature: feature to test login functionality
   Scenario: Check login is successful with valid credentials
 
     Given user is on login page
-    When user enters valid email and password
-    And click on login button
-    Then user is logged in and home page appears
+    When user logs in
+    And user search for some books
+    And user adds books in cart
+    Then user goes to cart
